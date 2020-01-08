@@ -1,0 +1,18 @@
+package com.model;
+
+@Entity
+@Table(name = "Faculty")
+public class FacultyRegistration{
+
+ @Id
+ @GeneratedValue(strategy = GenerationType.IDENTITY)
+ @Column(name = "facultyId")
+ private int facultyId;
+ @NotNull
+ private String facultyname;
+ @NotNull
+ private int batchId;
+ @NotNull
+ private int associateId;
+ @NotNull
+ private String facultyDepartment;

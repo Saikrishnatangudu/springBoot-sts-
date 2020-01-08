@@ -1,0 +1,33 @@
+package com.model;
+
+
+
+import javax.persistence.*;
+
+import javax.validation.constraints.*;
+
+
+@Entity
+@Table(name = "loginRegistration")
+public class Student {
+	@NotNull
+	private String firstName;
+	@NotNull
+	private String lastName;
+	private int age;
+	private Gender gender;
+	private String contactNumber;
+	@Email
+	@NotBlank
+	private String emailId;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	
+	private int associateId;
+
+	public enum Gender {
+		MALE, FEMALE
+	}
+	
+	
+
+}

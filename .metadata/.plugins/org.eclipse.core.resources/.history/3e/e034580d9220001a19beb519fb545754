@@ -1,0 +1,30 @@
+package com;
+
+
+
+import org.jboss.logging.Logger;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@SpringBootApplication
+public class StsdemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(StsdemoApplication.class, args);
+
+	}
+
+	private static final Logger LOGGER = Logger.getLogger(StsdemoApplication.class);
+	
+
+	@GetMapping(value = "/")
+	public String fun() {
+		LOGGER.info("helooooo");
+		return "Saikrishna....,Welcome to Spring Tool Suite";
+	}
+
+
+}
